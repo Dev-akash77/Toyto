@@ -1,0 +1,948 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+Vithkuqi:wght@600&family=Nunito+Sans:opsz@6..12&family=Oxygen&family=PT+Sans&family=Roboto:wght@300&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+   font-family: 'Noto Sans Vithkuqi', sans-serif;
+  color: var(--black);
+  text-decoration: none;
+}
+hmtl{
+  overflow-x: hidden;
+  font-size: 63.5%;
+}
+body{
+  overflow-x: hidden;
+  background-color:var(--white);
+}
+/*:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::color::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::*/
+ :root{
+   --white:#EFFFFB;
+   --black:#272727;
+   --blue:#4F98CA;
+   --green:#50D890;/*50D890*/
+   --red:#ff044f;
+ }
+/*::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: reuse able code::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::*/
+   .spm{
+     padding-left: 5rem;
+     margin-top: 7rem;
+   }
+   .sm{
+     margin-top: 7rem;
+   }
+  
+/*::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: HEADER STAT::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::*/
+   #header{
+     top: 0;
+     display: flex;
+     align-items: center;
+     justify-content: space-around;
+     padding:2rem 0;
+     width: 100%;
+      gap: 17rem;
+      box-shadow: .3rem .2rem 2rem rgba(0,0 , 50, .3);
+      position: fixed;
+      height: 10rem;
+      z-index: 300;
+      background-color: var(--white);
+   }
+   #header h2{
+     font-size: 5rem;
+     font-family: 'PT Sans', sans-serif;
+   }
+   #header h2 span{
+     color: var(--blue);
+   }
+   #header .bar{
+     border: .3rem solid var(--black);
+     padding: 1rem;
+   }
+   #header .bar i{
+     font-size: 4rem;
+   }
+
+/*::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: HEADER END::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::*/
+/*::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: NAV START::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::*/
+    #nav{
+      height: 100vh;
+      width: 100vw;
+      padding-left: 5rem;
+      background-color:var(--white);
+      box-shadow: .2rem .2rem 3rem rgba(0,0 , 50, .3);
+      position: fixed;
+      display: flex;
+      flex-direction: column;
+      transform: translateX(200%);
+      transition: .3s linear;
+      z-index: 40000000000;
+    }
+    #nav .bar{
+      border: .3rem solid var(--black);
+      width:7rem; 
+      height:7rem;
+      display: grid;
+      position: absolute;
+      place-items: center;
+      top: 4rem;
+    }
+    #nav .bar .fa-xmark{
+      font-size:5rem;
+    }
+    #nav ul{
+      display: flex;
+      flex-direction: column;
+      gap: 4rem;
+      margin-top:20rem;
+      transition: .5s linear;
+    }
+    #nav ul li{
+      font-size: 5rem;
+      cursor: pointer;
+      list-style: none;
+      position: relative;
+      transition: .2s ease;
+      width: auto;
+      height: auto;
+    }
+    #nav .fa-bag-shopping{
+      font-size:5rem;
+      margin-top: 4rem;
+    }
+  #nav ul li:after{
+      background-color: var(--blue);
+     content:'';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width:0%;
+      height: .5rem;
+      overflow: hidden;
+      transition: .2s linear;
+    }
+    #nav ul li:hover:after{
+      width: 15%;
+    }
+    .active{
+      color: var(--blue);
+    }
+     #nav .active:after {
+       background-color: var(--blue);
+       content: '';
+       position: absolute;
+       bottom: 0;
+       left: 0;
+       width: 15%;
+       height: .5rem;
+       overflow: hidden;
+       transition: .2s linear;
+     }
+    
+    #nav ul li:hover{
+      color: var(--blue);
+    }
+/*::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: NAV END::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::*/
+/*::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: HERO START::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::*/
+#hero{
+  background-image: linear-gradient(rgba(239, 255, 251, .3),rgba(0, 0, 0, .4)),url("/hero.jpg");
+  margin-top: 10rem;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position:cover;
+  height:60vh;
+  background-attachment: fixed;
+  padding: 5rem 0 0 5rem;
+  
+}
+#hero p{
+  font-size: 3rem;
+  margin: 3rem 0;
+}
+#hero h1{
+  font-size: 6rem;
+  margin-bottom: 5rem;
+}
+#hero h1 span{
+  color: var(--blue);
+}
+#hero .btn{
+  padding: 2rem 2rem;
+  border: 0;
+  font-size: 3rem;
+  background-color: var(--green);
+  border-radius: 1rem;
+  margin-top: 3rem;
+  color: var(--white);
+}
+
+
+/*::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: HERO END::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::*/
+/*::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: OFFER START::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::*/
+   #offer{
+     display: grid;
+     place-content: center;
+     grid-template-columns: repeat(2,43%);
+     grid-template-rows: repeat(3,30rem);
+       gap: 3rem;
+   } 
+  #offer .of_img{
+     display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+     border-radius: 1rem;
+     box-shadow: .2rem .2rem 1rem rgba(0, 0, 0, .4);
+     gap: 2rem;
+     border: .2rem solid var(--blue);
+  }
+   #offer .of_img img{
+     width: 70%;
+     height:55%;
+   }
+   #offer .of_img .btn{
+     background-color: var(--blue);
+     color: white;
+     padding:1rem;
+     font-size: 3rem;
+     cursor: pointer;
+     border-radius: 1rem;
+     border: none;
+     transition: .5s ease;
+   }
+  #offer .of_img .btn:hover{
+     background-color: var(--white);
+     color: var(--blue);
+     box-shadow: .2rem .2rem 1rem rgba(0, 0, 0, .4);
+   }
+/*::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: OFFER END::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::*/
+/*::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: FEATURED START::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::*/
+  #featured{
+    margin-bottom: 10rem;
+  }
+  #featured h2{
+    font-size: 5rem;
+    text-align: center;
+  }
+  #featured .sub_h{
+    margin-top: 1rem;
+    font-size:.5rem;
+    text-align: center;
+    color: grey;
+  }
+   .all_f_products{
+    margin-top: 5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5rem;
+  }
+    .all_f_products .f_products{
+      height:60rem;
+      border-top:.3rem solid var(--green);
+      border-right:.3rem solid var(--green);
+      border-bottom:.3rem solid var(--blue);
+      border-left:.3rem solid var(--blue);
+      width: 83%;
+      border-radius: 1rem;
+    }
+    
+    .f_products{
+      padding:1rem;
+      position: relative;
+    }
+    .f_p_i_d{
+      background-color:rgba(128,128,128,.2);
+      border-radius: 1rem;
+      display: grid;
+      place-items: center;
+      height: 60%;
+      width: 100%;
+      position: relative;
+      margin-bottom: 1rem;
+      
+    }
+    .f_p_i_d img{
+      width:60%;
+      position: absolute;
+      
+    }
+    .p_brand{
+      color: grey;
+      font-size: 2rem;
+    }
+    .f_products p{
+      font-size: 3rem;
+      margin:1rem 0;
+      color: var(--green);
+      font-weight: 900;
+    }
+    .star{
+      display: flex;
+      gap: 1rem;
+      margin-bottom: 2rem;
+    }
+    .star i{
+      font-size: 3rem;
+      color:gold;
+    }
+    .rupey{
+      font-size: 4rem;
+      margin-top: 2rem;
+      color: var(--green);
+      font-weight: 900;
+    }
+    .shop{
+      background-color: rgba(80, 216, 144, .2);
+      border-radius: 50%;
+      padding: 2rem;
+      display: grid;
+      place-items: center;
+      position: absolute;
+      right: 2rem;
+      bottom: 3rem;
+    }
+    .shop i{
+      color: var(--green);
+      font-size: 3rem;
+     
+    }
+    
+/*::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: FEATURED END::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::*/
+/*::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: GLASSSE START::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::*/
+   #glasses{
+     background-image:linear-gradient(rgba(0,0,0,.8),rgba(0,0,0,.8)),url('/glasses.jpg');
+     background-position: center;
+     background-repeat: no-repeat;
+     background-size: cover;
+     padding: 5rem;
+     text-align: center;
+     line-height: 6rem;
+   }
+   #glasses .garanty{
+     color: var(--white);
+     font-size: 2.5rem;
+     text-align: center;
+     margin: 1rem;
+   }
+    #glasses h2{
+      font-size: 4.8rem;
+      color:var(--white);
+      line-height: 7rem;
+    }
+     #glasses h2 span{
+       color: var(--red);
+    }
+    #glasses button{
+      padding: 1.5rem;
+      color: var(--black);
+      font-size: 3rem;
+      background-color:var(--white); 
+      border-radius: .5rem;
+      margin-top: 2rem;
+      font-weight: 300;
+      transition: .5s ease;
+    }
+    #glasses button:hover{
+       color: var(--white);
+       background-color:var(--green);
+    }
+/*::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: GLASES END::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::*/
+/*::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: NEWARIVAL STRAT::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::*/
+    #new_arival h2{
+    font-size: 5.3rem;
+    text-align: center;
+  }
+  #new_arival .sub_h_a{
+    margin-top: 1rem;
+    font-size: .5rem;
+    text-align: center;
+    color: grey;
+  }
+
+/*::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: NEWARIVAL END::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::*/
+/*::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: DEAL START::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::*/
+   #deal{
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+   }
+   #deal .sell{
+     padding-left: 5rem;
+     background-image:linear-gradient(rgba(0,0,0,.8),rgba(0,0,0,.8)),url('/deals.jpg');
+     background-position: center;
+     background-repeat: no-repeat;
+     background-size: cover;
+     padding: 8rem;
+     line-height: 6rem;
+   }
+   .sell span{
+     color: var(--white);
+     font-size: 3rem;
+   }
+   .sell h2{
+     color: var(--white);
+     font-size: 5rem;
+   }
+   .sell p{
+     font-size: 2rem;
+     color: var(--white);
+   }
+   .ex{
+    color: var(--white);
+    border:.3rem solid var(--white);
+    background-color: transparent;
+    padding: 1.5rem;
+    font-size: 3rem;
+    border-radius: .5rem;
+    transition: .5s ease;
+    margin-top: 5rem;
+   }
+   .ex:hover{
+      color: var(--white);
+      background-color:var(--green);
+      border: none;
+   }
+   #deal .soon{
+      background-image:linear-gradient(rgba(0,0,0,.8),rgba(0,0,0,.8)),url('/coming.png');
+   }
+   .coll:hover{
+        background-color:var(--blue);
+   }
+/*::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: DEAL END::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::*/
+/*::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: FOOTWARE SRAT::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::*/
+   #footware{
+     display: grid;
+     place-items: center;
+     gap: 5rem;
+   }
+   #footware .one_t_f{
+   background-image:linear-gradient(rgba(0,0,0,.5),rgba(0,0,0,.5)),url('/footware-one.jpg');
+   background-position: center;
+   background-size: cover;
+    width:90%;
+    height:80rem;
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 2rem;
+    padding-left: 2rem;
+  }
+  #footware .one_t_f h2{
+    font-size: 5rem;
+    color: var(--white);
+    font-weight: 1000;
+  }
+  #footware .one_t_f p{
+    font-size:3rem;
+    color: var(--green);
+    font-weight: bold;
+  }
+ 
+/*::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: FOOTWARE END::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::*/
+/*::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: CONTACT START::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::*/
+    #contact{
+      background-color:var(--blue);
+      padding:4rem 2rem;
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+    }
+    .contact_article h2{
+      font-size: 4rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+    }
+    .contact_article p{
+      color: var(--green);
+      font-size: 1rem;
+    }
+    .input{
+      position: relative;
+      width:95%;
+      display: flex;
+    }
+    .input input{
+      width:70%;
+      border-radius: .5rem;
+      border: none;
+      outline: none;
+      padding: 2rem 1rem;
+      font-size: 2rem;
+      border-right: none;
+      border-top-right-radius: 0;
+      border-bottom-right-radius: 0;
+    }
+    .input button{
+      background-color: var(--green);
+      color:var(--white);
+      position:absolute;
+      top: 0;
+      bottom: 0;
+      right: 0;
+      border-top-right-radius:.5rem;
+      border-bottom-right-radius:.5rem;
+      width: 30%;
+      height: 100%;
+      font-size: 3rem;
+      font-weight: bold;
+      border: none;
+      border-left: none;
+    }
+    
+/*::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: CONTACT END::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::*/
+/*::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: FOOTER START::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::*/
+  #footer{
+    background-color: var(--black);
+    color:var(--white);
+    padding:1rem 2rem;
+  }
+ #footer .footer_logo h2{
+   font-size:5rem;
+   font-family: 'PT Sans', sans-serif;
+   color:var(--white);
+   padding-left: 3rem;
+ }
+   #footer .footer_logo h2 span{
+     color: var(--blue);
+   }
+  .footer_about_mycon{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: repeat(1,37rem) 35rem;
+    gap: .4rem;
+    margin-top: 2rem;
+    
+  }
+  .fam h2{
+    font-size:3.5rem;
+    color:var(--white);
+    font-weight: bold;
+  }
+ .fam ul{
+   margin-top: 2rem;
+ }
+ .fam li{
+   list-style: none;
+   font-size: 1.5rem;
+   color:var(--white);
+   line-height: 5rem;
+ }
+ .footer_about{
+   grid-column: 1/2;
+   grid-row: 1/2;
+ }
+ .footer_mycon{
+   grid-column: 2/-1;
+   grid-row: 1/2;
+ }
+ .footer_contact{
+  grid-column: 1/-1;
+   grid-row: 2/-1;
+ }
+ .footer_contact p{
+   font-size: 1.5rem;
+   color:var(--white); 
+   margin-bottom: 1rem;
+ }
+ .footer_contact h2{
+   margin-bottom: 2rem;
+ }
+ .footer_contact span{
+   font-size: 2rem;
+   color:var(--white); 
+   font-weight: bold;
+ }
+ .follow h2{
+   font-size:4rem;
+    color:var(--white);
+    font-weight: bold;
+    margin-bottom: 3rem;
+ }
+ .follow_logo{
+   display:flex;
+   justify-content: center;
+   align-items: center;
+   gap: 5rem;
+ }
+ .f_l{
+   background-color: var(--white);
+   height: 9rem;
+   width: 9rem;
+   border-radius: 50%;
+   display: grid;
+   place-items: center;
+ }
+ .f_l a i{
+   font-size:5rem;
+  }
+  .copyright{
+    margin-top:6rem;
+    margin-bottom: 3rem;
+    display: grid;
+    place-items: center;
+  }
+  .cr_article{
+    font-size: 2rem;
+    color: var(--white);
+    width :95%;
+    text-align: center;
+  }
+/*::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: FOOTER END::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::*/
+/*::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: SHOP START::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::*/
+/*:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::  CLICK IMAGE START::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::*/
+
+  #click_image{
+    margin-top:15rem;
+  }
+  .mainimg_div{
+    display: grid;
+    place-items:center;
+  }
+  .img_div{
+    background-color:rgba(128,128,128,.5);
+    width: 80%;
+    border-radius: 2rem;
+    height:50rem;
+    display: grid;
+    place-items: center;
+  }
+  .subimg_div{
+    display: grid;
+    grid-template-columns: repeat(3,10rem);
+    grid-template-rows: repeat(2,10rem);
+/*    place-content: center;*/
+    gap:1rem;
+    margin-left:7rem;
+    margin-top: 3rem;
+    width:58%;
+  }
+  .sub_i_div{
+    display: grid;
+    place-items: center;
+  background-color:rgba(128,128,128,.5);
+  border-radius: 1rem;
+  }
+  .sub_i_div img{
+    width:9rem;
+  }
+
+  .shop_image_article{
+    padding-left:2rem;
+    margin-top: 4rem;
+  }
+  .shop_image_article span{
+    font-size: 1.5rem;
+  }
+  .shop_image_article h3{
+    font-size: 3rem;
+    font-weight:500;
+    margin: 1rem 0;
+  }
+  .shop_image_article h2{
+    font-size: 3.3rem;
+    font-weight:900;
+  }
+  .shop_image_article select{
+    margin: 1rem 0;
+     height:5rem;
+     width: 28%;
+     font-size: 2rem;
+     padding-left: .8rem;
+     background-color: transparent;
+     border: .3rem solid var(--black);
+     outline: none;
+  }
+  .number_add{
+    display: flex;
+    /*justify-content: center;*/
+    align-items: center;
+    padding:1rem 0;
+    gap:1.5rem; 
+  }
+  .number_add input{
+    width: 15%;
+    padding: 1.3rem 2.5rem;
+    background-color: transparent;
+    border: .3rem solid var(--black);
+    font-size: 3rem;
+    outline: none;
+  }
+  .number_add button{
+    background-color: var(--green);
+    font-size:3rem;
+    color: var(--white);
+    padding: 1.5rem;
+    border: none;
+    outline: none;
+    border-radius:.3rem;
+  }
+  .number_add p{
+    font-size:1rem;
+  }
+/*:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::  CLICK IMAGE END::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::*/
+/*::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: SHOP END::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::*/
+/*::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: ABOUT SECTION START::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::*/
+/*::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: KNOW START::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::*/
+  #knowus{
+    background-image: linear-gradient(rgba(0,0,0,.7),rgba(0,0,0,.7)),url('/deals.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin-top: 10rem;
+    padding: 6rem 0;
+    text-align: center;
+  }
+  #knowus h1{
+    color: var(--white);
+    font-size: 8rem;
+    font-weight: bold;
+    margin-bottom: 2rem;
+  }
+  #knowus p{
+    color: var(--white);
+    font-size: 1.7rem;
+    padding: 0 1.5rem;
+  }
+/*::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: KNOW END::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::*/
+/*::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: WHO WE ARE  START::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::*/
+
+   #whoweare{
+     display: flex;
+     flex-direction: column;
+     gap: 3rem;
+   }
+   .whoweare_images{
+   display: grid;
+   place-items: center;
+   }
+   .whoweare_images img{
+      width: 57rem;
+   }
+   .whoweare_second{
+     padding-left: 2rem;
+   }
+   .whoweare_second h2{
+     font-size: 4rem;
+     margin-bottom: 1rem;
+     font-weight: 700;
+   }
+   .whoweare_second p{
+     width: 95%;
+     font-size: 1.5rem;
+     line-height: 4.5rem;
+   }
+   
+
+
+
+
+
+/*::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: WHO WE ARE  END::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::*/
+/*::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: ABOUT SECTION END::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::*/
+/*::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: BLOG SECTION START::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::*/
+/*::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: BLOG HERO START::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::*/
+   #blog_hero{
+       background-image: linear-gradient(rgba(0, 0, 0, .7),rgba(0, 0, 0, .7)),url("/onlineorder.png");
+       margin-top: 10rem;
+       padding: 6rem 0rem;
+       text-align: center;
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+   }
+   #blog_hero h1{
+     color: var(--white);
+     font-weight: 900;
+     font-size: 8rem;
+     margin-bottom: 1.5rem;
+   }
+   #blog_hero p{
+    color: var(--white);
+     font-size: 1.7rem;
+     padding: 0 1.5rem;
+   }
+/*::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: BLOG HERO END::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::*/
+/*::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: BLOG SUB STRAT::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::*/
+   #blog_sub{
+     display: flex;
+     flex-direction: column;
+     gap: 3rem;
+     justify-content: center;
+     align-items: center;
+   }
+   .blog_sub_section{
+     padding:3rem 2rem;
+     border-left: .3rem solid var(--red);
+     border-top: .3rem solid var(--red);
+     border-right: .3rem solid var(--blue);
+     border-bottom: .3rem solid var(--blue);
+     display: flex;
+     flex-direction: column;
+     width:90%;
+     gap: 4rem;
+   }
+ 
+   .blog_sub_image img{
+     width: 50rem;
+   }
+   .blog_sub_article h2{
+     font-weight: 800;
+     font-size: 2rem;
+     margin-bottom: 1rem;
+   }
+   .blog_sub_article p{
+     width: 95%;
+     font-size:1.2rem;
+     line-height: 3.5rem;
+   }
+   .blog_sub_article h5{
+     margin-top: 1.5rem;
+     font-size: 1.7rem;
+     font-weight: 700;
+     position: relative;
+   }
+   .blog_sub_article h5:after{
+     position: absolute;
+     content: '';
+     right: 10rem;
+     width: 10rem;
+     height: .4rem;
+     top:1.5rem;
+     background-color: var(--black);
+   }
+   .next_btn{
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     gap: 1rem;
+     margin-top: 1rem;
+   }
+   .next_btn button{
+     background-color: var(--blue);
+     padding:2rem;
+     border: none;
+     border-radius:.5rem;
+     color: var(--white);
+     font-size: 2.5rem;
+     font-weight: bold;
+   }
+   .next_btn button i{
+      color: var(--white);
+      font-size: 2.5rem;
+      font-weight: bold;
+   }
+/*::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: BLOG SUB END::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::*/
+/*::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: BLOG SECTION END::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::*/
+
+ #contact_hero{
+    background-image: linear-gradient(rgba(0, 0, 0, .7),rgba(0, 0, 0, .7)),url("/onlineorder.png");
+       margin-top: 10rem;
+       padding: 8rem 0rem;
+       text-align: center;
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+ }
+ #contact_hero h1{
+   font-size: 7rem;
+   color: var(--white);
+   font-weight: bold;
+ }
+/* .gmap_canvas{
+   width: 80%;
+ } */
+ .gmap_canvas{
+   display: grid;
+   place-items: center;
+ }
+ #from{
+    padding-left: 3rem;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+  }
+  .all_input{
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    gap:1.5rem;
+    padding: 1rem 0;
+  }
+  .all_input label{
+    font-size: 3.5rem;
+    font-weight: bold;
+  }
+  .all_input input{
+    border: none;
+    border-bottom: .3rem solid var(--black);
+    height: 5rem;
+    outline: none;
+    font-size: 2.5rem;
+    background-color: transparent;
+    padding-left: 1rem;
+  }
+  .textarea{
+    height: 40rem;
+    border: .3rem solid black;
+    width: 90%;
+  }
+  .textarea textarea{
+    width: 100%;
+    height: 100%;
+    background-color:transparent;
+    outline: none;
+   padding-left: 1rem;
+   padding-top: 1rem;
+    font-size: 3rem;
+  }
+  .sBtn{
+    background-color: var(--blue);
+    color: var(--white);
+    font-size: 4rem;
+    cursor: pointer;
+    padding:1rem 2.5rem;
+    border: none;
+    outline: none;
+    font-weight: 900;
+    border-radius: .7rem;
+  }
+  .mouse{
+    background-color: var(--blue);
+    height: 2rem;
+    width: 2rem;
+    border-radius: 50%;
+    position:absolute;
+    transition: .1s ease;
+  }
+  .mm{
+    overflow: hidden;
+    position: relative;
+  }
+@media(max-width:998px){
+  html{
+    font-size:100%;
+  }
+}
+@media(max-width:480px){
+  html{
+    font-size:33.5%;
+  }
+  .main_img{
+   width: 40rem;
+  }
+   .f_p_i_d img {
+        width: 50%;
+        position: absolute;
+  
+      }
+     .blog_sub_image img {
+           width:55rem;
+      }
+        #glasses button{
+          border: none;
+          outline:none
+        }
+}
