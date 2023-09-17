@@ -928,7 +928,7 @@ body{
 }
 @media(max-width:480px){
   html{
-    font-size:33.5%;
+    font-size:35%;
   }
   .main_img{
    width: 40rem;
@@ -945,4 +945,68 @@ body{
           border: none;
           outline:none
         }
+        .footer_about ul li{
+          font-size: 3rem;
+        }
+        .footer_about{
+          margin-left: 3rem;
+        }
+        .footer_about h2{
+          font-size: 4.5rem;
+        }
+        .footer_mycon{
+          margin-left: 1rem;
+        }
+      .footer_mycon ul li{
+          font-size: 3rem;
+        }
+        .footer_mycon h2{
+          font-size: 4.5rem;
+        }
+    .footer_contact{
+      margin-left: 3rem;
+    }   
+  .footer_contact p{
+    font-size: 2rem;
+  }
+   .footer_contact span {
+     font-size: 3rem;
+   }
+    .footer_contact h2 {
+      font-size: 4.5rem;
+    }
+     .follow h2 {
+       margin-left: 3.2rem;
+     }
+     .follow{
+       margin-bottom: 9rem;
+     }
+    #knowus p{
+      font-size:3rem;
+    }
+    .whoweare_second h2{
+      font-size: 4.5rem;
+    }
+    .whoweare_second p{
+      font-size: 2.5rem;
+    }
+    .shop_image_article p{
+      font-size: 2.5rem;
+      width: 90%;
+    }
+    #blog_hero h1{
+      font-size: 7rem;
+    }
+    #blog_hero p{
+      font-size: 2.5rem;
+    }
+    .blog_sub_article h2{
+      font-size: 3rem;
+    }
+    .blog_sub_article p{
+      font-size: 2.5rem;
+    }
+    .blog_sub_article h5{
+      font-size:2.5rem;
+    }
 }
